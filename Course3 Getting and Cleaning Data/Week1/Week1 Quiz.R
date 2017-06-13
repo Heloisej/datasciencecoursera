@@ -1,7 +1,7 @@
 library(data.table)
 library(xlsx)
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv",destfile = './data/com.csv')
-dt <- read.csv('./data/com.csv', header = TRUE)
+dt <- read.csv('F:/GitHub/datasciencecoursera/Course3 Getting and Cleaning Data/Week1/data/com.csv', header = TRUE)
 table(dt$VAL)
 class(dt$FES)
 
@@ -11,7 +11,7 @@ class(dt$FES)
 download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx",destfile = './data/Q3.xlsx')
 rowIndex <- 18:23
 colIndex <- 7:15
-dat <- read.xlsx("./data/Q3.xlsx",sheetIndex = 1,rowIndex = rowIndex,colIndex = colIndex)
+dat <- read.xlsx("F:/GitHub/datasciencecoursera/Course3 Getting and Cleaning Data/Week1/data/Q3.xlsx",sheetIndex = 1,rowIndex = rowIndex,colIndex = colIndex)
 sum(dat$Zip*dat$Ext,na.rm=T)
 
 
